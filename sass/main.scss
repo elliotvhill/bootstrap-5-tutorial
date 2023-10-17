@@ -1,5 +1,24 @@
 // custom variables
-$primary: yellow;
+$primary: #2292A4;
+$secondary: #878483;
+$success: #35CE8D;
+$info: #9F18E7;
+$warning: #9F18E7;
+$danger: #B74F6F;
+$light: #F8F8F8;
+$dark: #1D1D1D;
 
-// import bootstrap
+// import the functions & variables -> have to come AFTER re-defined variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+    "altlight": #9DCDD5,
+    "altdark": #398999,
+    "altwarning": #FFA69E,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors );
+
+// import bootstrap -> HAS to be at the bottom
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
